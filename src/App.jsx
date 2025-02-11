@@ -72,7 +72,7 @@ function App() {
         label,
         data: data.map((d) => d.temp),
         borderColor: "blue",
-        backgroundColor: "rgb(133, 196, 255)",
+        backgroundColor: "rgb(133, 196, 256)",
         fill: true,
       },
     ],

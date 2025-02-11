@@ -31,21 +31,21 @@ function App() {
     return <div>データを取得中...</div>;
   }
 
-  // 今日・明日・明後日のデータを整理
+  
   const today = [];
   const tomorrow = [];
   const dayAfterTomorrow = [];
 
   const now = new Date();
-  const todayDate = now.setHours(0, 0, 0, 0); // 今日の開始時間（00:00:00）
-  const tomorrowDate = new Date(now).setDate(now.getDate() + 1); // 明日の開始時間
-  const dayAfterTomorrowDate = new Date(now).setDate(now.getDate() + 2); // 明後日の開始時間
+  const todayDate = now.setHours(0, 0, 0, 0); 
+  const tomorrowDate = new Date(now).setDate(now.getDate() + 1); 
+  const dayAfterTomorrowDate = new Date(now).setDate(now.getDate() + 2); 
 
   weather.list.forEach((forecast) => {
-    const forecastDate = new Date(forecast.dt * 1000).setHours(0, 0, 0, 0); // フォアキャストの日付（時間を00:00に設定）
+    const forecastDate = new Date(forecast.dt * 1000).setHours(0, 0, 0, 0); 
 
     const tempData = {
-      time: new Date(forecast.dt * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), // 時間を表示
+      time: new Date(forecast.dt * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       temp: forecast.main.temp,
       icon: forecast.weather[0].icon,
       description: forecast.weather[0].description,
@@ -60,11 +60,11 @@ function App() {
     }
   });
 
-  // 指定したフォーマットで日付を表示
+ 
   const formatDate = (date) =>
     new Date(date).toLocaleDateString("ja-JP", { month: "numeric", day: "numeric" }) + "日";
 
-  // Chart.js 用データ
+
   const chartData = (data, label) => ({
     labels: data.map((d) => d.time),
     datasets: [

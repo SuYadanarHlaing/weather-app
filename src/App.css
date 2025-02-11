@@ -1,4 +1,4 @@
-/* 全体のスタイル */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -18,12 +18,12 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* 横並びカード */
+
 .weather-cards-container {
   display: flex;
-  justify-content: space-around; /* カードの間にスペースを入れる */
+  justify-content: space-around; 
   gap: 20px;
-  flex-wrap: wrap; /* 画面幅に応じて折り返し */
+  flex-wrap: wrap; 
   margin-top: 20px;
 }
 
@@ -31,10 +31,10 @@ h1 {
   background-color: rgb(82, 173, 218);
   border-radius: 10px;
   padding: 20px;
-  width: 280px; /* 横並びのカードの幅を設定 */
+  width: 280px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  flex-shrink: 0; /* カードの縮小を防ぐ */
+  flex-shrink: 0;
 }
 
 .weather-icon {
@@ -43,28 +43,28 @@ h1 {
   margin-top: 10px;
 }
 
-/* グラフの表示 */
+
 .weather-card canvas {
   width: 100% !important;
   max-width: 260px;
   margin: 0 auto;
 }
 
-/* スマホ向け調整 */
+
 @media (max-width: 1200px) {
   .app-container {
     padding: 10px;
   }
 
   .weather-cards-container {
-    flex-direction: column; /* スマホでは縦並び */
+    flex-direction: column; 
     gap: 15px;
   }
 
   .weather-card {
     padding: 15px;
     margin-bottom: 20px;
-    width: 100%; /* スマホでは幅いっぱい */
+    width: 100%; 
   }
 
   h1 {
@@ -77,7 +77,7 @@ h1 {
   }
 }
 
-/* エラーメッセージ */
+
 .error {
   color: red;
   font-size: 1.2em;

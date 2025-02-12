@@ -1,85 +1,71 @@
-
+/* 全体の背景色とフォント */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
 }
 
 .app-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
+  margin-top: 50px;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
   margin-bottom: 20px;
+  color: #007bff;
 }
 
+.city-select {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  cursor: pointer;
+}
 
 .weather-cards-container {
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
+  flex-wrap: wrap;
   gap: 20px;
-  flex-wrap: wrap; 
-  margin-top: 20px;
 }
 
 .weather-card {
-  background-color: rgb(82, 173, 218);
-  border-radius: 10px;
+  background-color: white;
   padding: 20px;
-  width: 280px; 
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
   text-align: center;
-  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: scale(1.05);
 }
 
 .weather-icon {
   width: 50px;
   height: 50px;
-  margin-top: 10px;
 }
 
-
-.weather-card canvas {
-  width: 100% !important;
-  max-width: 260px;
-  margin: 0 auto;
+.weather-card h2 {
+  color: #007bff;
+  font-size: 1.2rem;
 }
 
-
-@media (max-width: 1200px) {
-  .app-container {
-    padding: 10px;
-  }
-
-  .weather-cards-container {
-    flex-direction: column; 
-    gap: 15px;
-  }
-
-  .weather-card {
-    padding: 15px;
-    margin-bottom: 20px;
-    width: 100%; 
-  }
-
-  h1 {
-    font-size: 1.5em;
-  }
-
-  .weather-icon {
-    width: 40px;
-    height: 40px;
-  }
+.weather-card p {
+  font-size: 1rem;
+  margin: 5px 0;
 }
-
 
 .error {
   color: red;
-  font-size: 1.2em;
-  text-align: center;
+  font-weight: bold;
 }
